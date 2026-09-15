@@ -19,8 +19,6 @@ const MEMBERS = [
     hero: "img/bangchan.jpg",
     story:
       "En 2010, con apenas 13 años, Bang Chan pasó la audición global de JYP Entertainment celebrada en Australia y se mudó solo a Corea del Sur para convertirse en trainee. Entrenó durante unos siete años, compartiendo pasillos y dorms con futuros miembros de TWICE, GOT7 y DAY6. En 2016 conoció en clases de MIDI a Han y Changbin, y con ellos formó 3RACHA: el trío de producción que subió su primer mixtape (J:/2017/mixtape) a SoundCloud en enero de 2017, sin que la empresa supiera nada.",
-    chanChoice:
-      "No fue 'escogido': fue él quien escogió. JYP le encargó el proyecto completo de formar un grupo nuevo: elegir a los trainees, ponerle nombre y hasta diseñar el logo. Ese proceso se grabó y dio origen al reality 'Stray Kids' (2017), que culminó con el debut el 25 de marzo de 2018. El grupo existe porque Bang Chan lo construyó con sus propias manos.",
     songs: [
       { t: "I Hate to Admit", kr: "인정하기 싫어", label: "SKZ-PLAYER · 2021" },
       { t: "Red Lights", kr: "강박", label: "con Hyunjin · Noeasy · 2021" },
@@ -63,8 +61,6 @@ const MEMBERS = [
     hero: "img/leeknow.png",
     story:
       "Lee Know fue descubierto mientras competía en una competencia de baile, con un pasado como bailarín de respaldo profesional (llegó a bailar para BTS en los MAMA). Audicionó en JYP con 'Thought of You' de John Park, no recibió respuesta y asumió que había fallado. Años después, un llamado lo invitó a unirse: el 15 de julio de 2017 se convirtió en el ÚLTIMO miembro en incorporarse al equipo, a pocos meses del estreno. Hoy es el bailarín principal y gato humano oficial de Stray Kids.",
-    chanChoice:
-      "A Bang Chan le faltaba un pilar de baile y lo eligió por eso: control, líneas, técnica y una presencia en el escenario que no se enseña. Lee Know entró al proyecto cuando el reality ya estaba en marcha y, pese a quedar 'eliminado' temporalmente, terminó debutando con el grupo. La jugada fue redonda: hoy es considerado uno de los mejores bailarines de su generación.",
     songs: [
       { t: "Limbo", kr: "나지막이", label: "SKZ-Replay · 2022" },
       { t: "Drive", kr: "", label: "con Bang Chan · SKZ-Replay · 2022" },
@@ -107,8 +103,6 @@ const MEMBERS = [
     hero: "img/changbin.png",
     story:
       "Changbin entró a JYP de una forma atípica: audicionó con una canción original suya, dejando claro desde el primer segundo que no era un rapero más. Durante su entrenamiento, y a escondidas de la empresa, se unió a Bang Chan y Han para crear 3RACHA, el trío con el que lanzó varios mixtapes a SoundCloud bajo el pseudónimo SpearB. Esa 'rebelión' terminó convirtiéndolo en el compositor principal de la discografía de Stray Kids.",
-    chanChoice:
-      "Bang Chan lo conoció en las clases de MIDI de JYP y reconoció al instante su voz grave y su lápiz para escribir. Fue el segundo pilar de 3RACHA y, junto a Chan y Han, la razón de que Stray Kids sea un grupo 'hecho a sí mismo'. Con más de 180 canciones acreditadas, su firma está en prácticamente toda la música del grupo.",
     songs: [
       { t: "Doodle", kr: "", label: "SKZ-RECORD · 2022" },
       { t: "Streetlight", kr: "", label: "feat. Bang Chan · SKZ-PLAYER · 2021" },
@@ -150,8 +144,6 @@ const MEMBERS = [
     hero: "img/hyunjin.png",
     story:
       "Hyunjin llegó a JYP con una base de baile impresionante y una imagen imposible de ignorar. Entrenó poco tiempo antes de entrar al proyecto de Bang Chan, y durante todo el reality 'Stray Kids' fue uno de los pocos que nunca quedó fuera del line-up. Debutó como rapero y bailarín, pero con los años reveló una faceta menos esperada: también pinta, bailó ballet de niño y colecciona un talento artístico que va mucho más allá del escenario.",
-    chanChoice:
-      "Bang Chan lo escogió por su presencia escénica y su rol de 'visual': la estética de Hyunjin —con su baile, su rostro y su ángel artístico— era pieza clave del rompecabezas. Hoy es además uno de los artistas más completos del grupo, con canciones propias que van del rap al lirismo más delicado.",
     songs: [
       { t: "Little Star", kr: "꼬마별", label: "Escrita por su perro Kkomi" },
       { t: "miss you", kr: "", label: "SKZ-RECORD · 2021" },
@@ -195,8 +187,6 @@ const MEMBERS = [
     hero: "img/han.png",
     story:
       "Han nació en Incheon pero pasó parte de su infancia en Kuala Lumpur, Malasia, antes de volver a Corea para perseguir la música. Se unió a JYP siendo muy joven y fue, junto a Bang Chan y Changbin, el tercer y último miembro original de 3RACHA. Es considerado el 'ace' del grupo: puede rapear, cantar, componer y producir con la misma facilidad —y es el responsable de directos que dejan a cualquiera con la boca abierta.",
-    chanChoice:
-      "Bang Chan lo reclutó tras conocerlo en clases de MIDI, al escucharlo rapear Y cantar en el mismo día. Para Chan era la pieza todoterreno perfecta: Han podía sostener un grupo por completo si hacía falta. El tiempo le dio la razón: hoy es uno de los compositores más importantes de Stray Kids.",
     songs: [
       { t: "Close", kr: "", label: "con Bang Chan · SKZ-PLAYER · 2020" },
       { t: "I Got It", kr: "", label: "SKZ-PLAYER · 2020" },
@@ -240,8 +230,6 @@ const MEMBERS = [
     hero: "img/felix.png",
     story:
       "Felix pasó la audición internacional de JYP en Australia y se mudó a Corea del Sur en febrero de 2017, con apenas un año de entrenamiento antes del debut. En el reality 'Stray Kids' quedó eliminado —su coreano y su desempeño en el escenario no estaban listos— pero Bang Chan lo trajo de vuelta para la misión final. Hoy es dueño de una de las voces más graves y reconocibles del K-pop, y un pilar absoluto del grupo.",
-    chanChoice:
-      "Bang Chan lo escogió personalmente: ambos son de Sídney, y Chan ejerció de mentor para su compatriota desde el primer día. El propio Felix lo confesó en una entrevista para GQ Australia: 'No esperaba que alguien como yo, que intentaba ser como él, fuera elegido'. Lo que vino después es historia: su voz de bajo es ahora un sello inconfundible de Stray Kids.",
     songs: [
       { t: "Deep end", kr: "", label: "SKZ-PLAYER · 2022" },
       { t: "Rev it up", kr: "", label: "SKZ-PLAYER · 2024" },
@@ -285,8 +273,6 @@ const MEMBERS = [
     hero: "img/seungmin.png",
     story:
       "Antes de pisar un escenario, Seungmin soñaba con ser beisbolista profesional (y sí, era muy bueno bateando). Se unió a JYP a través de una audición casi en la recta final de la formación del grupo, y pese a su corto tiempo de entrenamiento se ganó el puesto de vocalista principal. Su voz clara y estable es la columna de los coros de Stray Kids desde el minuto uno.",
-    chanChoice:
-      "A Bang Chan le hacía falta una voz que sostuviera el sonido del grupo, y esa voz era la de Seungmin. Su color vocal limpio y su estabilidad lo convirtieron en el vocalista principal de Stray Kids y, más tarde, en el primer miembro del grupo en lanzar un OST en solitario ('Here Always', de Hometown Cha-Cha-Cha).",
     songs: [
       { t: "Here Always", kr: "", label: "OST de Hometown Cha-Cha-Cha · 2021 · su primer solo" },
       { t: "Close to You", kr: "", label: "OST · 2022" },
@@ -328,9 +314,7 @@ const MEMBERS = [
     joinedYear: "2016",
     hero: "img/in.png",
     story:
-      "I.N fue captado por JYP en plena secundaria, siendo un adolescente, y entró directo al proyecto de Bang Chan como el más joven de todos. Durante el reality 'Stray Kids' quedó 'eliminado' temporalmente, pero volvió para la misión final y debutó a los 17 años como maknae del grupo. La ironía perfecta: el 'bebé' de Stray Kids tiene hoy una de las voces más serias y el registro más maduro del grupo.",
-    chanChoice:
-      "Bang Chan lo agregó para equilibrar la formación: necesitaba un maknae joven que aportara energía fresca, voz y ese rol de 'hermano menor' que sostiene la dinámica del grupo. El tiempo convirtió la apuesta en algo más: I.N creció junto a sus hermanos mayores y hoy es un pilar escénico y vocal de Stray Kids.",
+      "I.N fue captado por JYP en plena secundaria, siendo un adolescente, y entró directo al proyecto de Bang Chan como el más joven de todos. Durante el reality 'Stray Kids' llegó a estar en la cuerda floja más de una vez, pero nunca quedó eliminado: aguantó cada misión y debutó a los 17 años como maknae del grupo. La ironía perfecta: el 'bebé' de Stray Kids tiene hoy una de las voces más serias y el registro más maduro del grupo.",
     songs: [
       { t: "HALLUCINATION", kr: "", label: "SKZ-PLAYER · 2022" },
       { t: "DESERT", kr: "", label: "SKZ-PLAYER · 2024" },
