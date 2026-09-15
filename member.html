@@ -109,6 +109,7 @@
     text-transform: uppercase;
     border: 1px solid rgba(255,255,255,0.15);
     background: rgba(255,255,255,0.05);
+    color: var(--text);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
   }
@@ -234,32 +235,31 @@
   .role-tag.unit { background: rgba(255,94,58,0.1); border-color: rgba(255,94,58,0.32); color: #ff8b6f; }
 
   /* ---------- Fact table ---------- */
-  .fact-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .fact {
-    padding: 26px 24px;
+  .fact-card {
     border-radius: var(--radius);
     background: var(--panel);
     border: 1px solid var(--panel-border);
-    transition: transform 0.35s ease, border-color 0.35s ease;
+    overflow: hidden;
   }
 
-  .fact:hover { transform: translateY(-4px); border-color: rgba(248,217,10,0.3); }
+  .fact {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--panel-border);
+    transition: background 0.3s ease;
+  }
+
+  .fact:last-child { border-bottom: none; }
 
   .fact .f-label {
     font-size: 10.5px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .fact .f-value {
-    font-size: 15px;
+    font-size: 15.5px;
     line-height: 1.5;
     font-weight: 500;
   }
@@ -496,13 +496,11 @@
     .hero-min { grid-template-columns: 1fr; gap: 44px; padding-top: 130px; text-align: center; }
     .hero-photo { max-width: 460px; margin: 0 auto; width: 100%; }
     .hero-tags, .tagline { justify-content: center; }
-    .fact-grid { grid-template-columns: repeat(2, 1fr); }
     .story-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     section { padding: 90px 5vw; }
     .song-list { grid-template-columns: 1fr; }
-    .fact-grid { grid-template-columns: 1fr 1fr; }
     .member-nav { flex-direction: column; }
     .mnav, .mnav.next { max-width: 100%; text-align: left; align-items: flex-start; }
     nav { padding: 16px 5vw; }
@@ -514,7 +512,7 @@
 
 <nav id="nav">
   <a class="nav-brand" href="index.html"><span class="logo-dot"></span> SKZ</a>
-  <button class="btn-back" id="btnBack" type="button"><span>←</span><span class="txt">Volver al pack</span></button>
+  <button class="btn-back" id="btnBack" type="button"><span>←</span><span class="txt">Volver</span></button>
 </nav>
 
 <main id="page" class="hidden"></main>
@@ -591,7 +589,7 @@
         <div class="kicker">Ficha rápida</div>
         <h2>Quién es</h2>
       </div>
-      <div class="fact-grid">
+      <div class="fact-card">
         <div class="fact"><div class="f-label">Nombre completo</div><div class="f-value">${m.fullName}</div></div>
         <div class="fact"><div class="f-label">Nombre coreano</div><div class="f-value">${m.krName}</div></div>
         <div class="fact"><div class="f-label">Fecha de nacimiento</div><div class="f-value">${birth.day} de ${birth.month} de ${birth.year} · ${calcAge(m.birth)} años</div></div>
@@ -712,7 +710,7 @@
       <div class="notfound">
         <h1>404</h1>
         <p>Ese lobo no está en la manada.</p>
-        <a class="btn-back" href="index.html">← Volver al pack</a>
+        <a class="btn-back" href="index.html">← Volver</a>
       </div>
     `;
     document.title = "No encontrado · Stray Kids";
