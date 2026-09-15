@@ -807,8 +807,8 @@
 
   <div class="members-grid">
 
-    <article class="member reveal">
-      <div class="photo"><img src="img/bangchan.jpg" alt="Bang Chan de Stray Kids" loading="lazy" /></div>
+    <article class="member reveal" data-member="bangchan">
+      <div class="photo"><img src="img/members/chan-2026.png" alt="Bang Chan de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">01</div>
       <div class="info">
@@ -823,7 +823,7 @@
       </div>
     </article>
 
-    <article class="member reveal reveal-d1">
+    <article class="member reveal reveal-d1" data-member="leeknow">
       <div class="photo"><img src="img/leeknow.png" alt="Lee Know de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">02</div>
@@ -839,7 +839,7 @@
       </div>
     </article>
 
-    <article class="member reveal reveal-d2">
+    <article class="member reveal reveal-d2" data-member="changbin">
       <div class="photo"><img src="img/changbin.png" alt="Changbin de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">03</div>
@@ -855,7 +855,7 @@
       </div>
     </article>
 
-    <article class="member reveal reveal-d3">
+    <article class="member reveal reveal-d3" data-member="hyunjin">
       <div class="photo"><img src="img/hyunjin.png" alt="Hyunjin de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">04</div>
@@ -871,7 +871,7 @@
       </div>
     </article>
 
-    <article class="member reveal">
+    <article class="member reveal" data-member="han">
       <div class="photo"><img src="img/han.png" alt="Han de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">05</div>
@@ -887,7 +887,7 @@
       </div>
     </article>
 
-    <article class="member reveal reveal-d1">
+    <article class="member reveal reveal-d1" data-member="felix">
       <div class="photo"><img src="img/felix.png" alt="Felix de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">06</div>
@@ -903,7 +903,7 @@
       </div>
     </article>
 
-    <article class="member reveal reveal-d2">
+    <article class="member reveal reveal-d2" data-member="seungmin">
       <div class="photo"><img src="img/seungmin.png" alt="Seungmin de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">07</div>
@@ -918,7 +918,7 @@
       </div>
     </article>
 
-    <article class="member reveal reveal-d3">
+    <article class="member reveal reveal-d3" data-member="in">
       <div class="photo"><img src="img/in.png" alt="I.N de Stray Kids" loading="lazy" /></div>
       <div class="shade"></div>
       <div class="num">08</div>
@@ -1032,8 +1032,7 @@
   document.querySelectorAll(".member").forEach((card) => {
     const img = card.querySelector(".photo img");
     if (!img) return;
-    const fileName = img.getAttribute("src").split("/").pop().split(".")[0];
-    const id = fileName.toLowerCase();
+    const id = card.dataset.member;
     const name = card.querySelector(".name") ? card.querySelector(".name").textContent : "integrante";
 
     const pill = document.createElement("span");

@@ -16,7 +16,7 @@ const MEMBERS = [
     nationality: "Australiana",
     joinedLabel: "Audición JYP en Australia · 2010",
     joinedYear: "2011",
-    hero: "img/bangchan.jpg",
+    hero: "img/members/chan-2026.png",
     story:
       "En 2010, con apenas 13 años, Bang Chan pasó la audición global de JYP Entertainment celebrada en Australia y se mudó solo a Corea del Sur para convertirse en trainee. Entrenó durante unos siete años, compartiendo pasillos y dorms con futuros miembros de TWICE, GOT7 y DAY6. En 2016 conoció en clases de MIDI a Han y Changbin, y con ellos formó 3RACHA: el trío de producción que subió su primer mixtape (J:/2017/mixtape) a SoundCloud en enero de 2017, sin que la empresa supiera nada.",
     songs: [
