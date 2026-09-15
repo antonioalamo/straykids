@@ -485,6 +485,120 @@
   .unit .members-row span { font-weight: 600; font-size: 15px; color: #ddd; }
   .unit .members-row small { display: block; font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
 
+  /* ---------- Group overview ---------- */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .overview-card {
+    padding: 38px;
+    border-radius: var(--radius);
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+  }
+
+  .overview-card:hover { transform: translateY(-5px); border-color: rgba(248,217,10,0.3); }
+
+  .overview-card h3 {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .overview-card p { color: var(--muted); font-size: 15px; line-height: 1.8; }
+
+  .overview-card .stats {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .overview-card .stat {
+    padding: 16px;
+    border-radius: 13px;
+    background: rgba(7,7,11,0.45);
+    border: 1px solid var(--panel-border);
+  }
+
+  .overview-card .stat b { display: block; font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text); }
+  .overview-card .stat span { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+
+  .top-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .top-col {
+    padding: 34px;
+    border-radius: var(--radius);
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+  }
+
+  .top-col h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .top-col h3 .bar { width: 34px; height: 2px; background: var(--accent); }
+
+  .top-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--panel-border);
+    transition: transform 0.25s ease;
+  }
+
+  .top-item:last-child { border-bottom: none; }
+  .top-item:hover { transform: translateX(6px); }
+
+  .top-item .rank {
+    flex-shrink: 0;
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    background: rgba(248,217,10,0.1);
+    border: 1px solid rgba(248,217,10,0.3);
+    color: var(--accent);
+  }
+
+  .top-item .rank.top { background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: none; color: #000; }
+
+  .top-item .t-info { min-width: 0; }
+
+  .top-item .t-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .top-item .t-name small { display: inline; font-weight: 400; font-size: 12px; color: var(--muted); letter-spacing: 0.5px; }
+  .top-item .t-desc { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+
   /* ---------- Footer ---------- */
   footer {
     border-top: 1px solid var(--panel-border);
@@ -527,6 +641,8 @@
   @media (max-width: 1100px) {
     .members-grid { grid-template-columns: repeat(3, 1fr); }
     .units { grid-template-columns: 1fr; }
+    .overview-grid { grid-template-columns: 1fr; }
+    .top-lists { grid-template-columns: 1fr; }
   }
   @media (max-width: 760px) {
     .members-grid { grid-template-columns: repeat(2, 1fr); }
@@ -546,8 +662,9 @@
 <nav id="nav">
   <div class="nav-brand"><span class="logo-dot"></span> SKZ</div>
   <div class="nav-links">
+    <a href="#overview">The Group</a>
     <a href="#members">Members</a>
-    <a href="#group">Group</a>
+    <a href="#group">Pack</a>
     <a href="#units">Units</a>
   </div>
 </nav>
@@ -568,10 +685,122 @@
   </div>
 </div>
 
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="section-head reveal">
+    <div class="kicker">01 — The Group</div>
+    <h2>La manada en números</h2>
+    <p>Ocho lobos, un mismo ADN: autoproducción, energía cruda y récords que parecen de otro planeta.</p>
+  </div>
+
+  <div class="overview-grid">
+    <div class="overview-card reveal">
+      <h3>Quiénes son</h3>
+      <p>Stray Kids debutó el 25 de marzo de 2018 bajo JYP Entertainment, nacido del reality homónimo en el que Bang Chan eligió a sus propios integrantes. Son un grupo "hecho a sí mismo": el trío 3RACHA (Bang Chan, Changbin y Han) escribe, compone y produce casi toda la música. Su sonido mezcla EDM, hip-hop y rock, y su fandom se llama <b style="color:#f8d90a">STAY</b>.</p>
+      <div class="stats">
+        <div class="stat"><b>25 mar 2018</b><span>Debut oficial</span></div>
+        <div class="stat"><b>8</b><span>Miembros</span></div>
+        <div class="stat"><b>9×</b><span>#1 Billboard 200 consecutivos</span></div>
+        <div class="stat"><b>3RACHA</b><span>Producción propia</span></div>
+      </div>
+    </div>
+    <div class="overview-card reveal reveal-d1">
+      <h3>El logro que rompió el molde</h3>
+      <p>En 2022, <b style="color:#f8d90a">ODDINARY</b> llevó a Stray Kids por primera vez al #1 del Billboard 200 estadounidense. Desde entonces sumaron nueve álbumes consecutivos en la cima —un récord que iguala a The Beatles— y se consolidaron como el grupo de K-pop más veloz en conquistar los charts globales, con giras mundiales sold out y estadios llenos en todo el planeta.</p>
+      <div class="stats">
+        <div class="stat"><b>9×</b><span>#1 Billboard 200 consecutivos</span></div>
+        <div class="stat"><b>The Beatles</b><span>Racha histórica igualada</span></div>
+        <div class="stat"><b>Headliner</b><span>Governors Ball · Lollapalooza · Rock in Rio</span></div>
+        <div class="stat"><b>Sold out</b><span>Giras mundiales (Dominate)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-lists">
+    <div class="top-col reveal">
+      <h3><span class="bar"></span>Top 5 canciones</h3>
+      <div class="top-item">
+        <div class="rank top">1</div>
+        <div class="t-info">
+          <div class="t-name">God's Menu <small>· 2020 · GO LIVE</small></div>
+          <div class="t-desc">El himno que definió el sonido de Stray Kids: la "cocina" que les abrió el mundo.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">2</div>
+        <div class="t-info">
+          <div class="t-name">Thunderous <small>· 2021 · NOEASY</small></div>
+          <div class="t-desc">Trap coreano con fanfarrias: su primer gran éxito mundial.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">3</div>
+        <div class="t-info">
+          <div class="t-name">MANIAC <small>· 2022 · ODDINARY</small></div>
+          <div class="t-desc">El explosivo que los puso en la mira global con el reto de baile.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">4</div>
+        <div class="t-info">
+          <div class="t-name">S-Class <small>· 2023 · 5-STAR</small></div>
+          <div class="t-desc">El track que encabezó su cuarto #1 consecutivo.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">5</div>
+        <div class="t-info">
+          <div class="t-name">Chk Chk Boom <small>· 2024 · ATE</small></div>
+          <div class="t-desc">Su hit más viral con Ryan Reynolds en el video.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-col reveal reveal-d1">
+      <h3><span class="bar"></span>Top 5 álbumes</h3>
+      <div class="top-item">
+        <div class="rank top">1</div>
+        <div class="t-info">
+          <div class="t-name">GO LIVE <small>· 2020</small></div>
+          <div class="t-desc">Su primer álbum de estudio: el punto de quiebre de "God's Menu".</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">2</div>
+        <div class="t-info">
+          <div class="t-name">NOEASY <small>· 2021</small></div>
+          <div class="t-desc">Su primer millón de ventas: Stray Kids dejan de ser promesa.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">3</div>
+        <div class="t-info">
+          <div class="t-name">ODDINARY <small>· 2022</small></div>
+          <div class="t-desc">Su primer #1 en el Billboard 200: el salto a la élite global.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">4</div>
+        <div class="t-info">
+          <div class="t-name">5-STAR <small>· 2023</small></div>
+          <div class="t-desc">Su álbum más vendido y otro #1: la versión "cósmica" del grupo.</div>
+        </div>
+      </div>
+      <div class="top-item">
+        <div class="rank">5</div>
+        <div class="t-info">
+          <div class="t-name">ATE <small>· 2024</small></div>
+          <div class="t-desc">Con "Chk Chk Boom": récords de reproducción y la racha intacta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MEMBERS -->
 <section id="members">
   <div class="section-head reveal">
-    <div class="kicker">01 — The Members</div>
+    <div class="kicker">02 — The Members</div>
     <h2>Eight Wolves,<br />One Pack</h2>
     <p>Each member carries a different energy — from 3RACHA's rap and production core to the counter-tenor golden voices. Hover any card to learn more.</p>
   </div>
@@ -710,7 +939,7 @@
 <!-- GROUP -->
 <section id="group">
   <div class="section-head reveal">
-    <div class="kicker">02 — The Pack</div>
+    <div class="kicker">03 — The Pack</div>
     <h2>Together as One</h2>
     <p>Whether stepping through Incheon Airport after a world tour or posing at award shows on the other side of the planet — eight, always.</p>
   </div>
@@ -738,7 +967,7 @@
 <!-- UNITS -->
 <section id="units">
   <div class="section-head reveal">
-    <div class="kicker">03 — The Units</div>
+    <div class="kicker">04 — The Units</div>
     <h2>Rachas Inside the Pack</h2>
     <p>Even wolves split into specialized squads. These are the three rachas that make SKZ a self-produced power.</p>
   </div>
