@@ -377,6 +377,36 @@
     line-height: 1.6;
   }
 
+  .member-card { display: block; text-decoration: none; color: inherit; }
+  .member-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius); }
+
+  .member .view-profile {
+    position: absolute;
+    top: 16px; left: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 9px 15px;
+    border-radius: 999px;
+    background: rgba(7,7,11,0.66);
+    border: 1px solid rgba(248,217,10,0.45);
+    color: var(--accent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .member-card:hover .view-profile,
+  .member-card:focus-visible .view-profile { opacity: 1; transform: none; }
+
   /* ---------- Group photos ---------- */
   .group-list { display: flex; flex-direction: column; gap: 44px; }
 
@@ -766,6 +796,26 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  document.querySelectorAll(".member").forEach((card) => {
+    const img = card.querySelector(".photo img");
+    if (!img) return;
+    const fileName = img.getAttribute("src").split("/").pop().split(".")[0];
+    const id = fileName.toLowerCase();
+    const name = card.querySelector(".name") ? card.querySelector(".name").textContent : "integrante";
+
+    const pill = document.createElement("span");
+    pill.className = "view-profile";
+    pill.textContent = "Ver perfil →";
+    card.appendChild(pill);
+
+    const link = document.createElement("a");
+    link.className = "member-card";
+    link.href = "member.html?id=" + id;
+    link.setAttribute("aria-label", "Ver perfil de " + name);
+    card.parentNode.insertBefore(link, card);
+    link.appendChild(card);
+  });
 </script>
 </body>
 </html>
